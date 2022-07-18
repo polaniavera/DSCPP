@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="card-row">
+    <div class="col-9" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="clusterSelected" (selectedChange)="barline.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of clusterItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <bar-line #barline></bar-line>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+    <div class="col-3" style="padding-left:0!important;
+      padding-right: 0 !important;">
+      <div class="card-col">
+        <nb-card>
+          <nb-card-header style="padding:0.25rem 0.5rem">Optimal Scenario</nb-card-header>
+          <nb-card-body>
+            <progress-scenario></progress-scenario>
+          </nb-card-body>
+        </nb-card>
+    </div>
+    </div>
+  </div>
+  
+  <div class="card-row">
+    <div class="col-6" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="productionSelected" (selectedChange)="production.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of productionItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <production-upstream #production></production-upstream>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    </div>
+    
+    <div class="col-6" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="assetSelected" (selectedChange)="injection.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of assetItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <injection-upstream #injection></injection-upstream>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    </div>
+  </div>
+</div>

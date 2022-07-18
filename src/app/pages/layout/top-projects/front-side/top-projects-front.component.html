@@ -1,0 +1,39 @@
+<nb-list>
+  <nb-list-item class="item" *ngFor="let item of frontCardData; trackBy: trackByDate">
+    <div>
+      <div class="caption">Project</div>
+      <div class="value">{{ item.id }}</div>
+    </div>
+
+    <div>
+      <div class="caption">NPV</div>
+      <div class="value">{{ item.npv }}</div>
+    </div>
+    <div>
+      <div class="caption">CAPEX</div>
+      <div class="value">{{ item.capex }}</div>
+    </div>
+    <div>
+      <div class="caption">RF</div>
+      <div class="value">{{ item.rf }}</div>
+    </div>
+    <div>
+      <div class="caption">DPI</div>
+      <div class="value">{{ item.dpi }}</div>
+    </div>
+    <div>
+      <div class="caption">Cum. P</div>
+      <div class="value">{{ item.prod }}</div>
+    </div>
+
+    <div>
+      <span class="delta" [class.up]="item.delta.up" [class.down]="!item.delta.up">
+        <nb-icon [icon]="item.delta.up ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+        {{ item.delta.value }}%
+      </span>
+    </div>
+
+    <!-- <ngx-top-bar [barData]="item.comparison" [successDelta]="item.delta.up"></ngx-top-bar> -->
+
+  </nb-list-item>
+</nb-list>

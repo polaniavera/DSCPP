@@ -1,0 +1,47 @@
+<nb-card style="height:20rem">
+
+  <nb-card-header style="padding:0.5rem">
+    <span>Top 10 Projects - Scenario 1</span>
+    <!-- <nb-select [selected]="type" (selectedChange)="getUserActivity($event); type = $event">
+      <nb-option *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
+    </nb-select> -->
+  </nb-card-header>
+
+  <nb-list class="user-activity-list">
+    <nb-list-item *ngFor="let item of trafficListData">
+      <div>
+        <div class="caption">Project</div>
+        <div class="value">{{ item.id }}</div>
+      </div>
+  
+      <div>
+        <div class="caption">NPV</div>
+        <div class="value">{{ item.npv }}</div>
+      </div>
+      <div>
+        <div class="caption">CAPEX</div>
+        <div class="value">{{ item.capex }}</div>
+      </div>
+      <div>
+        <div class="caption">RF</div>
+        <div class="value">{{ item.rf }}</div>
+      </div>
+      <div>
+        <div class="caption">DPI</div>
+        <div class="value">{{ item.dpi }}</div>
+      </div>
+      <div>
+        <div class="caption">Cum. P</div>
+        <div class="value">{{ item.prod }}</div>
+      </div>
+  
+      <div>
+        <span class="delta" [class.up]="item.delta.up" [class.down]="!item.delta.up">
+          <nb-icon [icon]="item.delta.up ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+          {{ item.delta.value }}%
+        </span>
+      </div>
+    </nb-list-item>
+  </nb-list>
+
+</nb-card>

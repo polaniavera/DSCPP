@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card-row">
+    
+    <div class="col-8" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="clusterSelected" (selectedChange)="cluster.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of clusterItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <cluster-upstream #cluster></cluster-upstream>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    </div>
+
+    <div class="col-4" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="clusterSelected" (selectedChange)="scat.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of clusterItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <scat-single #scat></scat-single>
+        </nb-card-body>
+      </nb-card>
+
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="barhorSelected" (selectedChange)="barhor.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of barhorItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <bar-horizontal #barhor></bar-horizontal>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>

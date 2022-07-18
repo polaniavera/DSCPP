@@ -1,0 +1,15 @@
+<nb-card style="height:25rem">
+  <nb-tabset fullWidth (changeTab)="changeTab($event)">
+    <nb-tab tabTitle="Scenario Parameters">
+      <!-- <div class="chart-container"> -->
+        <ngx-detailed-panel-summary [summary]="chartPanelSummary"></ngx-detailed-panel-summary>
+        <!-- <ngx-orders-chart #ordersChart [ordersChartData]="ordersChartData"></ngx-orders-chart> -->
+        <ngx-scenario-info></ngx-scenario-info>
+      <!-- </div> -->
+    </nb-tab>
+    <nb-tab tabTitle="Economics Parameters" [lazyLoad]="true">
+        <ngx-detailed-panel-summary [summary]="chartPanelSummary"></ngx-detailed-panel-summary>
+        <ngx-economic-info></ngx-economic-info>
+    </nb-tab>
+  </nb-tabset>
+</nb-card>

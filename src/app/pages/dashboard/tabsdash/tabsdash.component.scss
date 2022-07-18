@@ -1,0 +1,23 @@
+nb-route-tabset {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:host ::ng-deep ngx-tabdash1, :host ::ng-deep ngx-tabdash2 {
+  display: block;
+  padding: 0.2rem 0 0 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::ng-deep .card-col {
+  flex: 1 0 calc(50% - 1rem);
+  margin: 0.1rem;
+}
+
+::ng-deep .card-row {
+  display: flex;
+  margin: 0 -0.8rem;
+}

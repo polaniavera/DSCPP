@@ -1,0 +1,190 @@
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Project Name Tags and Hierarchy</nb-card-header>
+      <nb-card-body>
+        <form>
+          <div class="form-group">
+            <label for="projectname" class="label">Project Name</label>
+            <input type="text" nbInput fullWidth id="projectname" placeholder="Project Name">
+          </div>
+          <div class="form-group">
+            <label for="projectid" class="label">Project ID</label>
+            <input type="text" nbInput fullWidth id="projectid" placeholder="Project ID">
+          </div>
+          <div class="form-group">
+            <label for="reservoirname" class="label">Reservoir Name</label>
+            <input type="text" nbInput fullWidth id="reservoirname" placeholder="Reservoir Name">
+          </div>
+          <div class="form-group">
+            <label for="assetname" class="label">Asset Name</label>
+            <input type="text" nbInput fullWidth id="assetname" placeholder="Asset Name">
+          </div>
+          <div class="form-group">
+            <label for="companyname" class="label">Company Name</label>
+            <input type="text" nbInput fullWidth id="companyname" placeholder="Company Name">
+          </div>
+          <div class="form-group">
+            <label for="projecttype" class="label">Project Type</label>
+            <input type="text" nbInput fullWidth id="projecttype" placeholder="Project Type">
+          </div>
+          <div class="form-group">
+            <label for="agreementtype" class="label">Agreement Type</label>
+            <input type="text" nbInput fullWidth id="agreementtype" placeholder="Agreement Type">
+          </div>
+          <div class="form-group">
+            <label for="projectcommitment" class="label">Project Commitment</label>
+            <input type="text" nbInput fullWidth id="projectcommitment" placeholder="Project Commitment">
+          </div>
+          <div class="form-group">
+            <label for="projectsuccess" class="label">Possibility of Success</label>
+            <input type="text" nbInput fullWidth id="projectsuccess" placeholder="Possibility of Success">
+          </div>
+        </form>
+      </nb-card-body>
+    </nb-card>
+
+
+    <!-- 
+    <nb-card>
+      <nb-card-header>Project Name Tags and Hierarchy</nb-card-header>
+      <nb-card-body>
+        <input type="text" nbInput fullWidth placeholder="Project Name">
+        <div class="full-name-inputs">
+          <input type="text" nbInput fullWidth placeholder="Project ID">
+          <input type="text" nbInput fullWidth placeholder="Reservoir Name">
+        </div>
+        <input type="text" nbInput fullWidth placeholder="Asset Name">
+        <input type="text" nbInput fullWidth shape="rectangle" placeholder="Company Name">
+        <input type="text" nbInput fullWidth shape="rectangle" placeholder="Project Type">
+        <input type="text" nbInput fullWidth shape="rectangle" placeholder="Agreement Type">
+        <input type="text" nbInput fullWidth placeholder="Project Commitment"/>
+        <input type="text" nbInput fullWidth placeholder="Project Possibility of Success"/>
+        <textarea rows="5" nbInput fullWidth shape="rectangle"  placeholder="Text Area"></textarea>
+        <input type="text" nbInput fullWidth fieldSize="small"  placeholder="Small Input">
+        <input type="text" nbInput fullWidth fieldSize="medium"  placeholder="Medium Input">
+        <input type="text" nbInput fullWidth fieldSize="large"  placeholder="Large Input">
+      </nb-card-body>
+    </nb-card>
+     -->
+
+  </div>
+
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Working Interest</nb-card-header>
+      <nb-card-body>
+        <form>
+          <div class="form-group">
+            <label for="concession" class="label">Concession Working Interest %</label>
+            <input type="text" nbInput fullWidth id="concession" placeholder="Concession Working Interest">
+          </div>
+          <div class="form-group">
+            <label for="other" class="label">Other Working Interest (Govt. etc) %</label>
+            <input type="text" nbInput fullWidth id="other" placeholder="Other Working Interest">
+          </div>
+        </form>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header>Project Life Cycle</nb-card-header>
+      <nb-card-body>
+        <form class="form-horizontal">
+          <div class="form-group row">
+            <label for="lifecycle" class="label col-sm-4 form-control-label">Project Lifecycle Phase</label>
+            <div class="col-sm-8">
+              <nb-select selected="2" id="lifecycle">
+                <nb-option value="1">Phase 1</nb-option>
+                <nb-option value="2">Phase 2</nb-option>
+                <nb-option value="3">Phase 3</nb-option>
+                <nb-option value="4">Phase 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="category" class="label col-sm-4 form-control-label">Project Category</label>
+            <div class="col-sm-8">
+              <nb-select selected="3" id="category">
+                <nb-option value="1">Category 1</nb-option>
+                <nb-option value="2">Category 2</nb-option>
+                <nb-option value="3">Category 3</nb-option>
+                <nb-option value="4">Category 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        </form>
+
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header>Project Owner</nb-card-header>
+      <nb-card-body>
+        <form>
+          <div class="form-group">
+            <label for="manager" class="label">Manager</label>
+            <input type="text" nbInput fullWidth id="manager" placeholder="Manager">
+          </div>
+          <div class="form-group">
+            <label for="email" class="label">Manager Email</label>
+            <input type="email" nbInput fullWidth id="email" placeholder="Manager Email">
+          </div>
+          <button type="submit" nbButton status="primary">Submit</button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+
+    <!-- 
+    <nb-card>
+      <nb-card-header>Validation States</nb-card-header>
+      <nb-card-body>
+        <input type="text" nbInput fullWidth status="info"  placeholder="Input with Info">
+        <input type="text" nbInput fullWidth status="success"  placeholder="Warning Input">
+        <input type="text" nbInput fullWidth status="warning"  placeholder="Danger Input">
+        <input type="text" nbInput fullWidth status="danger" placeholder="Danger Input">
+        <input type="text" nbInput fullWidth status="primary"  placeholder="Input with Primary">
+        <div class="validation-checkboxes">
+          <nb-checkbox status="success">Success Checkbox</nb-checkbox>
+          <nb-checkbox status="warning">Warning Checkbox</nb-checkbox>
+          <nb-checkbox status="danger">Danger Checkbox</nb-checkbox>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header>Checkboxes & Radios</nb-card-header>
+      <nb-card-body class="checkbox-radio">
+        <div class="demo-items">
+          <nb-checkbox>Checkbox 1</nb-checkbox>
+          <nb-checkbox checked>Checkbox 2</nb-checkbox>
+        </div>
+        <div class="demo-items">
+          <nb-radio-group [(value)]="radioGroupValue">
+            <nb-radio
+              [value]="'This is value 1'">
+              Radio 1
+            </nb-radio>
+            <nb-radio
+              [value]="'This is value 2'">
+              Radio 2
+            </nb-radio>
+            <nb-radio
+              [value]="'This is value 3'">
+              Radio 3
+            </nb-radio>
+          </nb-radio-group>
+        </div>
+        <div class="demo-items">
+          <nb-checkbox disabled>Disabled Checkbox</nb-checkbox>
+          <nb-radio-group disabled>
+            <nb-radio
+              [value]="'Disabled Value'">
+              Disabled Radio
+            </nb-radio>
+          </nb-radio-group>
+        </div>
+      </nb-card-body>
+    </nb-card> -->
+  </div>
+</div>

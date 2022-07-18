@@ -1,0 +1,29 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+:host ::ng-deep ng2-smart-table table{
+  font-size:11px !important;
+}
+
+:host ::ng-deep ng2-smart-table thead > tr > th { 
+  padding:0.3rem !important;
+  margin:0 !important;
+  font-size:11px !important;
+}
+
+/* grid lines */
+:host ::ng-deep ng2-smart-table table > tbody > tr > td {
+  /* box-sizing: border-box;
+  border: 1px solid grey; */
+  //height: 10px !important;
+  padding:0 !important;
+  padding-left:0.3rem !important;
+  margin:0 !important;
+  font-size:12px !important;
+}
+

@@ -1,0 +1,13 @@
+<nb-card>
+  <nb-card-header>Create Project</nb-card-header>
+  <nb-card-body>
+    <input #name nbInput placeholder="Project name">
+    <nb-select [selected]="projectSelected" (selectedChange)="setValue($event)" status="primary" size="small">
+      <nb-option *ngFor="let item of assetArr" [value]="item">{{item}}</nb-option>
+    </nb-select>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton status="Add" (click)="submit(name.value,projectSelected)">Submit</button>
+    <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+  </nb-card-footer>
+</nb-card>

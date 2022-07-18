@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="card-row">
+
+    <div class="col-9" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="areaUpstreamSelected" (selectedChange)="area.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of areaUpstreamItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <area-upstream #area></area-upstream>
+        </nb-card-body>
+      </nb-card>
+      <!-- <production-upstream></production-upstream> -->
+
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="barUpstreamSelected" (selectedChange)="bar.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of barUpstreamItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <bar-upstream #bar></bar-upstream>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    </div>
+
+    <div class="col-3" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-body>
+          <progress-upstream></progress-upstream>
+        </nb-card-body>
+      </nb-card>
+      
+      <nb-card>
+        <nb-card-body>
+          <radar-upstream></radar-upstream>
+        </nb-card-body>
+      </nb-card>
+
+      <nb-card>
+        <nb-card-body>
+          <pie-upstream></pie-upstream>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+      
+
+</div>

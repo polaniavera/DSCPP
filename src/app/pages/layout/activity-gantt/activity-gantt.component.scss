@@ -1,0 +1,39 @@
+@import '../../../@theme/styles/themes';
+
+$shadow-green: #00977e;
+
+@include nb-install-component() {
+  .progress-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0rem;
+    padding:0.3rem 0.5rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .description {
+    margin-top: 0.01rem;
+  }
+
+  .delta {
+    //display: flex;
+    //align-items: center;
+    //position: relative;
+
+    &.down {
+      color: nb-theme(color-danger-default);
+    }
+
+    &.up {
+      color: nb-theme(color-success-default);
+    }
+
+    nb-icon ::ng-deep svg {
+      vertical-align: top;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div style="height:18rem;padding:0.5rem">
+  <div class="progress-info" *ngFor="let item of progressInfoData">
+    <div class="subtitle">{{ item.title }}</div>
+    <div style="font-size: 22px;font-weight: bold;">{{ item.value | ngxNumberWithCommas }}</div>
+    <nb-progress-bar [value]="item.activeProgress" [displayValue]="true" [status]=item.status></nb-progress-bar>
+    <!-- <div class="caption description">
+      <bdi>{{ item.description }}</bdi>
+    </div> -->
+  </div>
+</div>

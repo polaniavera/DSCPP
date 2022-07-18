@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card-row">
+    <div class="card-col">
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="waterfallSelected" (selectedChange)="waterfall.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of waterfallItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <waterfall-upstream #waterfall></waterfall-upstream>
+        </nb-card-body>
+      </nb-card>
+      </div>
+  </div>
+</div>

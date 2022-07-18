@@ -1,0 +1,18 @@
+<nb-card style="height:19rem">
+<nb-list>
+  <nb-list-item *ngFor="let item of listData">
+    <span class="parameter">{{ item.parameter }}</span>
+    <span>
+      <nb-icon
+        [class.down]="item.down"
+        [class.up]="!item.down"
+        [icon]="item.down ? 'arrow-down' : 'arrow-up'" pack="eva">
+      </nb-icon>
+      <!-- {{ item.delta }} -->
+    </span>
+    <span class="results">
+      {{ item.value }} <span class="caption">USD</span>
+    </span>
+  </nb-list-item>
+</nb-list>
+</nb-card>

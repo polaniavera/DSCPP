@@ -1,0 +1,21 @@
+<!-- <div echarts [options]="options" (chartInit)="onChartInit($event)" style="height:40rem"></div> -->
+
+<!-- <highcharts-chart 
+    [Highcharts]="Highcharts" 
+    [constructorType]="'ganttChart'" 
+    [options]="chartOptions"
+    style = "height: 40rem; display: block;">
+  </highcharts-chart> -->
+<nb-card>
+  <div id="container"></div>
+  <div id="buttonGroup" class="button-row">
+    <button nbButton (click)="showDialog()">
+      <i class="fa fa-plus"></i>
+      Add project
+    </button>
+    <button nbButton (click)="addProject()">
+      <i class="fa fa-remove"></i>
+      TEST
+    </button>
+  </div>
+</nb-card>

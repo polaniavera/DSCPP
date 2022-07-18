@@ -1,0 +1,17 @@
+
+<nb-reveal-card [showToggleButton]="false" [revealed]="false">
+  <nb-card-front>
+    <nb-card style="height:20rem">
+      <ngx-top-projects-header [type]="period" (periodChange)="setPeriodAngGetData($event)"></ngx-top-projects-header>
+      <ngx-top-projects-front [frontCardData]="trafficListData"></ngx-top-projects-front>
+     <!--  <nb-icon class="toggle-icon" icon="chevron-up-outline" pack="eva" (click)="toggleView()"></nb-icon> -->
+    </nb-card>
+  </nb-card-front>
+  <!-- <nb-card-back>
+    <nb-card size="large">
+      <ngx-top-projects-header [type]="period" (periodChange)="setPeriodAngGetData($event)"></ngx-top-projects-header>
+      <ngx-top-projects-back [trafficBarData]="trafficBarData"></ngx-top-projects-back>
+      <nb-icon class="toggle-icon" icon="chevron-down-outline" pack="eva" (click)="toggleView()"></nb-icon>
+    </nb-card>
+  </nb-card-back> -->
+</nb-reveal-card>

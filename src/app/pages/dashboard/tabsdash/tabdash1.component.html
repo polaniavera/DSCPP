@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="card-row">
+    <div class="col-6" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <ngx-traffic-card></ngx-traffic-card>
+    </div>
+    </div>
+
+
+    <div class="col-6" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      <ngx-dashboard-charts></ngx-dashboard-charts>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="container">
+  <div class="card-row">
+    
+    <div class="col-6" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+            <ngx-top-projects></ngx-top-projects>
+
+      
+      <nb-card>
+        <nb-card-header>
+          <nb-select [selected]="clusterSelected" (selectedChange)="stacked.setValue($event)" status="primary" size="small">
+            <nb-option *ngFor="let item of clusterItems" [value]="item.value">{{item.name}}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body>
+          <bar-stacked #stacked></bar-stacked>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    </div>
+
+    <div class="col-6" style="padding-left:0!important;
+    padding-right: 0 !important;">
+    <div class="card-col">
+      
+      <ngx-top-scenario></ngx-top-scenario>
+      
+      <nb-card>
+        <nb-card-body>
+          <injection-upstream #injection></injection-upstream>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div> -->
